@@ -141,14 +141,18 @@ export default {
         ui: 'var(--ui-size)',
       },
       animation: {
-        slowSpin: 'spin infinite 50s forwards',
         fadeIn: 'fadeIn 300ms cubic-bezier(0.16, 1, 0.3, 1)',
         popUp: 'popUp 500ms cubic-bezier(0.16, 1, 0.3, 1)',
+        swing: 'swing infinite 1s linear alternate-reverse',
       },
       keyframes: {
         fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+          from: { opacity: '0' },
+          to: { opacity: '1' },
+        },
+        swing: {
+          from: { transform: 'rotate(calc(0deg + var(--swing-angle, 180deg)))' },
+          to: { transform: 'rotate(calc(0deg - var(--swing-angle, 180deg)))' },
         },
         popUp: {
           from: {

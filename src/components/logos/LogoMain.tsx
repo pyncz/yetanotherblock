@@ -18,7 +18,7 @@ export const LogoMain: FC<LogoProps> = (props) => {
         height={height}
         viewBox={`0 0 ${width} ${height}`}
         xmlns="http://www.w3.org/2000/svg"
-        className={classNames('tw-h-7 tw-w-auto', className)}
+        className={classNames('tw-h-8 tw-w-auto', className)}
       >
         <path d="M64 32C64 48.5685 50.5685 62 34 62C17.4315 62 4 48.5685 4 32C4 15.4315 17.4315 2 34 2C50.5685 2 64 15.4315 64 32Z" fill="black"/>
         <rect

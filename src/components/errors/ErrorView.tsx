@@ -1,5 +1,6 @@
 import type { FC, PropsWithChildren } from 'react'
 import { useTranslation } from 'next-i18next'
+import { LogoSpinner } from '../LogoSpinner'
 
 interface Props {
   code?: number
@@ -25,15 +26,18 @@ export const ErrorView: FC<PropsWithChildren<Props>> = (props) => {
       <div className="tw-container tw-h-full tw-w-full tw-flex-center">
         <div role="alert" className="tw-space-y-8 tw-py-12 tw-max-w-xl">
           <div className="tw-space-y-1">
-            <div className="tw-max-w-sm tw-mx-auto tw-text-center tw-space-y-4">
-              {code
-                ? <h3 className="tw-text-accent-primary">
-                  {code}
-                </h3>
-                : null
-              }
+            <div className="tw-max-w-sm tw-mx-auto tw-text-center tw-space-y-1">
+              <div className="tw-space-y-6">
+                <LogoSpinner className="tw-mx-auto tw-shadow-[0_2rem_3rem_-2rem_rgb(var(--color-pure))]" />
+                {code
+                  ? <h3 className="tw-text-accent-primary tw-font-mono">
+                    {code}
+                  </h3>
+                  : null
+                }
+              </div>
               <div>
-                <h2 className="tw-mb-4">
+                <h2 className="tw-mb-4 tw-text-base">
                   {title}
                 </h2>
                 {description

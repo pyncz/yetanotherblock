@@ -40,7 +40,7 @@ const Card: FC<PropsWithClassName<PropsWithChildren<CardProps>>> = (props) => {
         '[--accent:rgb(var(--bg-dim-1))] tw-shadow-[--accent]',
         'tw-bg-dim-1 group-hover/card:tw-bg-dim-2 tw-duration-normal tw-rounded-lg tw-p-2 tw-flex-center tw-relative tw-overflow-hidden tw-shadow-connect tw-border-opacity-10',
         'tw-ring tw-ring-offset-2 tw-ring-opacity-muted tw-ring-offset-[rgb(var(--bg-base))] tw-ring-[transparent] group-focus/card:tw-ring-[--accent]',
-        'before:tw-absolute before:tw--inset-[1rem] before:tw-blur-[1rem] before:tw-animate-slowSpin hover:before:tw-scale-zoom',
+        'before:tw-absolute before:tw--inset-[1rem] before:tw-blur-[1rem] before:tw-animate-spin [animationDuration:50s]',
         { 'tw-p-6 tw-border !tw-bg-[--accent] tw-border-[--accent]': branded },
         className,
       )}
