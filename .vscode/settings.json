@@ -1,0 +1,22 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#0f0f1a",
+    "titleBar.activeBackground": "#070a14",
+    "titleBar.activeForeground": "#b8d0ff"
+  },
+  "files.associations": {
+    ".env.*": "properties",
+    ".env.template": "properties",
+    ".env.*.template": "properties"
+  },
+  "i18n-ally.displayLanguage": "en-US",
+  "i18n-ally.enabledFrameworks": [
+    "i18next"
+  ],
+  "i18n-ally.localesPaths": "public/locales",
+  "i18n-ally.keysInUse": [
+    "pages.*.title",
+    "pages.*.description",
+    "theme.*"
+  ]
+}

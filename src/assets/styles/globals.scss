@@ -1,0 +1,64 @@
+@use "themes";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply tw-text-[20px] sm:tw-text-[16px]; // 1 rem
+    @apply tw-text-base tw-bg-base tw-font-sans tw-leading-sm tw-relative;
+    @apply before:tw-opacity-[0.02] before:tw-z-muted before:tw-absolute before:tw-inset-0 before:tw-pointer-events-none;
+    &::before {
+      background-image: radial-gradient(circle closest-corner at center 10%, rgb(var(--accent-primary)), rgba(var(--accent-primary), 0) 90%);
+    }
+  }
+  body {
+    @apply tw-overscroll-none;
+  }
+  small {
+    @apply tw-text-sm;
+  }
+  a {
+    @apply tw-link;
+    &[role="button"] {
+      border: none !important;
+    }
+  }
+  input[type="number"]::-webkit-inner-spin-button {
+    appearance: none;
+  }
+  ::selection {
+    @apply tw-text-accent-secondary tw-bg-dim-3;
+  }
+  :root {
+    /* COMMON PALETTE */
+    --black: 0, 0, 0;
+    --white: 255, 255, 255;
+
+    --accent-primary: 0, 41, 255; // #0029FF
+    --accent-primary-lighten: 31, 68, 255; // #1f44ff
+    --accent-primary-darken: 0, 34, 204; // #0022cc
+
+    --accent-secondary: 26, 178, 255; // #1AB2FF
+    --accent-secondary-lighten: 61, 190, 255; // #3DBEFF
+    --accent-secondary-darken: 0, 153, 230; // #0099E6
+
+    --accent-tertiary: 255, 119, 61; // #FF773D
+    --accent-tertiary-lighten: 255, 137, 87; // #FF8957
+    --accent-tertiary-darken: 255, 94, 26; // #FF5E1A
+
+    /* COLOR MODES */
+    @include themes.light-mode;
+    @media (prefers-color-scheme: dark) {
+      @include themes.dark-mode;
+    }
+  }
+
+  /* Overrides */
+  .light-mode {
+    @include themes.light-mode;
+  }
+  .dark-mode {
+    @include themes.dark-mode;
+  }
+}

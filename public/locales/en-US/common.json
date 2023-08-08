@@ -1,0 +1,29 @@
+{
+  "chainName": "{{name}} chain",
+  "connect": "Connect",
+  "copyAddress": "Copy address",
+  "disconnect": "Disconnect",
+  "ensAvatar": "ENS avatar",
+  "errors": {
+    "_": "{{error}} Error",
+    "notFound": "Not Found",
+    "notFoundMessage": "No such page... You can go back home to manage your deployments.",
+    "serverError": "Internal Server Error",
+    "serverErrorMessage": "Something went wrong... We'll check that and certainly fix.",
+    "unexpected": "Unexpected error has occured"
+  },
+  "loadMore": "Load more",
+  "logo": "{{name}} logo",
+  "madeBy": "Made by",
+  "pages": {
+    "index": {
+      "description": "Deploy multichain decentralized projects easily! Select your smart contracts from a git repo, keep track of changes and deploy or update them in a couple of clicks.",
+      "title": "yetanotherblock - INVESTING IN MUSIC MADE EASY"
+    }
+  },
+  "theme": {
+    "dark": "Dark",
+    "light": "Light",
+    "system": "System"
+  }
+}
