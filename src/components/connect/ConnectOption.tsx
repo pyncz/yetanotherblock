@@ -48,7 +48,7 @@ const Card: FC<PropsWithClassName<PropsWithChildren<CardProps>>> = (props) => {
       <div
         className={classNames(
           'tw-flex-center tw-inline-flex tw-duration-normal tw-relative group-hover/card:tw-scale-zoom group-focus/card:tw-scale-zoom',
-          { 'tw-circle-20 tw-bg-dim-3': branded },
+          { 'tw-circle-20 tw-bg-dim-1': branded },
         )}
       >
         <Image

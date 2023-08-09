@@ -12,7 +12,7 @@ export const addLink = ({ addComponents, addUtilities, theme }) => {
       '--tw-border-opacity': '1',
 
       // apply regular link styles by default
-      '--link-text': 'var(--color-dim-2)',
+      '--link-text': 'var(--text-dim-2)',
       '--link-text--hover': 'var(--link-primary-vivid)',
       '--link-border': 'var(--border-dim-1)',
       '--link-border--hover': 'var(--link-primary-vivid)',
@@ -53,8 +53,8 @@ export const addLink = ({ addComponents, addUtilities, theme }) => {
       '--link-border--hover': 'var(--link-primary-vivid)',
     },
     '.link-muted': {
-      '--link-text': 'var(--color-dim-3)',
-      '--link-text--hover': 'var(--color-dim-2)',
+      '--link-text': 'var(--text-dim-3)',
+      '--link-text--hover': 'var(--text-dim-2)',
       '--link-border': 'var(--border-dim-1)',
       '--link-border--hover': 'var(--border-base)',
     },

@@ -10,11 +10,11 @@
   --accent-tertiary-muted: var(--accent-tertiary-darken);
 
   /* text */
-  --color-pure: var(--black);
-  --color-base: 250, 250, 252;
-  --color-dim-1: 200, 200, 203;
-  --color-dim-2: 138, 138, 142;
-  --color-dim-3: 64, 64, 69;
+  --text-pure: var(--black);
+  --text-base: 250, 250, 252;
+  --text-dim-1: 200, 200, 203;
+  --text-dim-2: 138, 138, 142;
+  --text-dim-3: 64, 64, 69;
   
   /* bg */
   --bg-base: 20, 20, 23;
@@ -52,37 +52,37 @@
   --button-secondary-color-vivid: var(--white);
   // input
   --input-bg: var(--bg-base);
-  --input-text: var(--color-dim-1);
+  --input-text: var(--text-dim-1);
   --input-border: var(--border-dim-2);
   --input-border--hover: var(--border-dim-1);
   --input-border--focus: var(--accent-secondary);
   --input-border--focus-hover: var(--accent-secondary-vivid);
-  --input-placeholder: var(--color-dim-3);
+  --input-placeholder: var(--text-dim-3);
   --input-readonly-bg: transparent;
-  --input-readonly-text: var(--color-dim-2);
+  --input-readonly-text: var(--text-dim-2);
   --input-disabled-bg: var(--bg-dim-1);
-  --input-disabled-text: var(--color-dim-2);
+  --input-disabled-text: var(--text-dim-2);
   --input-disabled-border: var(--border-dim-3);
-  --input-disabled-placeholder: var(--color-dim-3);
+  --input-disabled-placeholder: var(--text-dim-3);
   // select
   // - trigger
-  --select-icon: var(--color-dim-3);
+  --select-icon: var(--text-dim-3);
   // - container
-  --select-arrow: var(--color-dim-3);
-  --select-arrow--hover: var(--color-dim-2);
+  --select-arrow: var(--text-dim-3);
+  --select-arrow--hover: var(--text-dim-2);
   --select-content-bg: var(--bg-dim-2);
   --select-content-border: var(--border-dim-2);
   // - option
-  --select-option-text: var(--color-dim-2);
-  --select-option-text--hover: var(--color-dim-1);
-  --select-option-text--highlighted: var(--color-dim-1);
-  --select-option-disabled-text: var(--color-dim-3);
+  --select-option-text: var(--text-dim-2);
+  --select-option-text--hover: var(--text-dim-1);
+  --select-option-text--highlighted: var(--text-dim-1);
+  --select-option-disabled-text: var(--text-dim-3);
   --select-option-bg: var(--bg-dim-1);
   --o-select-option-bg: 0;
   --select-option-bg--hover: var(--bg-dim-1);
   --o-select-option-bg--hover: 1;
-  --select-option-checked-text: var(--color-base);
-  --select-option-checked-text--hover: var(--color-base);
+  --select-option-checked-text: var(--text-base);
+  --select-option-checked-text--hover: var(--text-base);
   --select-option-checked-bg: var(--bg-base);
   --o-select-option-checked-bg: 1;
 

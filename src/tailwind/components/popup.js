@@ -30,7 +30,7 @@ export const addPopup = ({ addComponents, theme }) => {
       '--tw-bg-opacity': '1',
 
       'backgroundColor': c('--bg-dim-3', '0.20'),
-      'color': c('--color-dim-2', 'var(--tw-text-opacity)'),
+      'color': c('--text-dim-2', 'var(--tw-text-opacity)'),
 
       'lineHeight': '1',
       'userSelect': 'none',

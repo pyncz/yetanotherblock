@@ -48,6 +48,7 @@ export default {
     colors: {
       black: co('--black'),
       white: co('--white'),
+      pure: co('--text-pure'),
       accent: {
         primary: co('--accent-primary'),
         secondary: co('--accent-secondary'),
@@ -76,8 +77,8 @@ export default {
     // skins
     textColor: (theme) => ({
       ...theme('colors'),
-      base: co('--color-base'),
-      dim: fill(3, (i) => co(`--color-dim-${i + 1}`)),
+      base: co('--text-base'),
+      dim: fill(3, (i) => co(`--text-dim-${i + 1}`)),
     }),
     backgroundColor: (theme) => ({
       ...theme('colors'),
@@ -116,7 +117,7 @@ export default {
     boxShadow: {
       none: 'none',
       connect: '0 2.25rem 3.5rem -3.5rem var(--tw-shadow-color)',
-      popup: '0 0 0 1px rgba(var(--border-dim-2), 0.5), 0 0.75rem 1.75rem -1.75rem rgba(var(--color-base), 0.25)',
+      popup: '0 0 0 1px rgba(var(--border-dim-2), 0.5), 0 0.75rem 1.75rem -1.75rem rgba(var(--text-base), 0.25)',
     },
     transitionDuration: {
       fast: '150ms',
