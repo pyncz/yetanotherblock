@@ -20,7 +20,7 @@ class AppDocument extends Document<Props> {
     const ogImage = `${getAppBaseUrl()}/img/cover.jpg`
 
     return (
-      <Html lang={currentLocale}>
+      <Html lang={currentLocale} className="[--p-main:1rem] xs:[--p-main:1.5rem] md:[--p-main:2rem]">
         {/* default meta */}
         <Head>
           <meta property="og:site_name" content="yetanotherblock" key="og-site_name" />

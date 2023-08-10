@@ -6,7 +6,7 @@
 @layer base {
   html {
     @apply tw-text-[20px] sm:tw-text-[16px]; // 1 rem
-    @apply tw-text-base tw-bg-base tw-font-sans tw-leading-sm tw-relative;
+    @apply tw-text-base tw-bg-base tw-font-sans tw-leading-md tw-relative;
     @apply before:tw-opacity-[0.02] before:tw-z-muted before:tw-absolute before:tw-inset-0 before:tw-pointer-events-none;
     &::before {
       background-image: radial-gradient(circle closest-corner at center 10%, rgb(var(--accent-primary)), rgba(var(--accent-primary), 0) 90%);
@@ -39,9 +39,9 @@
     --accent-primary-lighten: 31, 68, 255; // #1f44ff
     --accent-primary-darken: 0, 34, 204; // #0022cc
 
-    --accent-secondary: 187, 0, 255; // #bb00ff
-    --accent-secondary-lighten: 195, 31, 255; // #c31fff
-    --accent-secondary-darken: 150, 0, 204; // #9600cc
+    --accent-secondary: 255, 0, 166; // #ff00a6
+    --accent-secondary-lighten: 255, 51, 184; // #ff33b8
+    --accent-secondary-darken: 214, 0, 139; // #d6008b
 
     --accent-tertiary: 255, 119, 61; // #FF773D
     --accent-tertiary-lighten: 255, 137, 87; // #FF8957

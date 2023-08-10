@@ -71,7 +71,8 @@ export default {
       1: 1,
       xs: 1.1,
       sm: 1.15,
-      md: 1.5,
+      md: 1.3,
+      lg: 1.5,
       inherit: 'inherit',
     },
     // skins
@@ -201,9 +202,19 @@ export default {
           paddingTop: 'var(--ui-py)',
           paddingBottom: 'var(--ui-py)',
         },
-        '.layout': {
-          width: '100%',
-          minHeight: '100vh',
+      })
+
+      addComponents({
+        '.grid-main': {
+          'display': 'grid',
+          'alignItems': 'flex-start',
+          'gridTemplateColumns': 'repeat(1, minmax(0, 1fr))',
+          'rowGap': '1rem',
+          'columnGap': '1.5rem',
+          '@screen md': {
+            rowGap: '1.5rem',
+            columnGap: '2rem',
+          },
         },
       })
     },

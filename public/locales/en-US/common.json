@@ -1,5 +1,6 @@
 {
   "chainName": "{{name}} chain",
+  "close": "Close",
   "connect": "Connect",
   "copyAddress": "Copy address",
   "disconnect": "Disconnect",
