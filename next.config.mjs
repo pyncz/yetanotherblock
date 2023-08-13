@@ -13,5 +13,11 @@ const config = {
   reactStrictMode: true,
   swcMinify: true,
   i18n,
+
+  // Fixes reservoir/NextJS CommonJS module issue
+  // @see https://docs.reservoir.tools/reference/troubleshooting#nextjs-commonjs-module-error
+  transpilePackages: [
+    '@reservoir0x/reservoir-kit-ui',
+  ],
 }
 export default config

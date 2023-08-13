@@ -15,6 +15,8 @@ export const serverSchema = z.object({
 */
 export const clientSchema = z.object({
   // NEXT_PUBLIC_ client vars
+  NEXT_PUBLIC_RESERVOIRE_API_KEY: z.string(),
+  NEXT_PUBLIC_RESERVOIRE_COLLECTION_SET_ID: z.string(),
   NEXT_PUBLIC_ALCHEMY_API_KEY: z.string(),
   NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID: z.string(),
   NEXT_PUBLIC_ENV: z.enum(['development', 'test', 'production']).default('development'),
@@ -27,6 +29,8 @@ export const clientSchema = z.object({
  * @type {{ [k in keyof z.input<typeof clientSchema>]: string | undefined }}
  */
 export const clientEnv = {
+  NEXT_PUBLIC_RESERVOIRE_API_KEY: process.env.NEXT_PUBLIC_RESERVOIRE_API_KEY,
+  NEXT_PUBLIC_RESERVOIRE_COLLECTION_SET_ID: process.env.NEXT_PUBLIC_RESERVOIRE_COLLECTION_SET_ID,
   NEXT_PUBLIC_ALCHEMY_API_KEY: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY,
   NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID,
   NEXT_PUBLIC_ENV: process.env.NEXT_PUBLIC_ENV,
