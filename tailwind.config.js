@@ -29,9 +29,9 @@ export default {
       'sm': '0.875rem',
       'normal': '1rem',
       'lg': '1.25rem',
-      'xl': '1.75rem',
-      '2xl': '2.5rem',
-      '3xl': '3.5rem',
+      'xl': '1.5rem',
+      '2xl': '1.75rem',
+      '3xl': '2rem',
 
       '3/4': '0.75em',
       '7/8': '0.875em',
@@ -48,7 +48,7 @@ export default {
     colors: {
       black: co('--black'),
       white: co('--white'),
-      pure: co('--text-pure'),
+      pure: co('--bg-pure'),
       accent: {
         primary: co('--accent-primary'),
         secondary: co('--accent-secondary'),
@@ -117,6 +117,7 @@ export default {
     },
     boxShadow: {
       none: 'none',
+      card: '0 0 0.25rem 0 rgba(2, 8, 154, 0.25)',
       connect: '0 2.25rem 3.5rem -3.5rem var(--tw-shadow-color)',
       popup: '0 0 0 1px rgba(var(--border-dim-2), 0.5), 0 0.75rem 1.75rem -1.75rem rgba(var(--text-base), 0.25)',
     },
@@ -134,6 +135,9 @@ export default {
       screens: {
         '2xs': '320px',
         'xs': '400px',
+      },
+      blur: {
+        px: '1px',
       },
       spacing: {
         nav: '6rem',

@@ -1,7 +1,7 @@
 import type { FC, PropsWithChildren } from 'react'
+import { AppFooter, LogoLink } from '../components'
+import { useBreakpoint } from '../hooks'
 import { LayoutBase } from './base'
-import { useBreakpoint } from 'src/hooks'
-import { AppFooter, LogoLink } from 'src/components'
 
 export const LayoutMain: FC<PropsWithChildren> = ({ children }) => {
   const placeWrappingIntoSidebar = useBreakpoint('lg')

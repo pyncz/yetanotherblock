@@ -7,6 +7,7 @@ export * from './logos'
 export * from './locale'
 export * from './theme'
 export * from './connect'
+export * from './collections'
 
 // document special components
 export * from './HeadMeta'
@@ -18,3 +19,4 @@ export * from './LogoLink'
 export * from './ConnectedState'
 export * from './CopyButton'
 export * from './LogoSpinner'
+export * from './Section'

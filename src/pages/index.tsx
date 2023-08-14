@@ -3,8 +3,9 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import type { GetServerSideProps, NextPage } from 'next'
 import { useCollections } from '@reservoir0x/reservoir-kit-ui'
 import i18nextConfig from '../../next-i18next.config'
-import { ClientOnly, HeadMeta } from '../components'
-import { env } from 'src/env/client.mjs'
+import { CollectionCard, ControlButton, HeadMeta, Section } from '../components'
+import { env } from '../env/client.mjs'
+import { DEFAULT_PAGINATION_LIMIT } from '../consts'
 
 export const getServerSideProps: GetServerSideProps = async ({
   locale,
@@ -23,6 +24,8 @@ const Home: NextPage = () => {
 
   const { data: collections, fetchNextPage, hasNextPage } = useCollections({
     collectionsSetId: env.NEXT_PUBLIC_RESERVOIRE_COLLECTION_SET_ID,
+    limit: DEFAULT_PAGINATION_LIMIT,
+    sortBy: '30DayVolume',
   })
 
   return (
@@ -33,20 +36,30 @@ const Home: NextPage = () => {
       />
 
       <div className="lg:tw-sticky tw-top-0 sm:tw-col-[3] sm:tw-row-[1/5]">
-        <div className="tw-p-4 tw-border tw-border-[cyan]">
-          right bar
-          <div className="tw-grid tw-gap-4">
+        <Section
+          title={i18n.t('trendingCollections')}
+        >
+          <div className="tw-grid tw-grid-cols-1 xs:tw-grid-cols-2 sm:tw-grid-cols-1 tw-gap-3">
             {collections.map((collection) => (
-              <div key={collection.id}>
-                {collection.name}
-              </div>
+              <CollectionCard
+                className="tw-h-32 xs:tw-h-auto xs:tw-aspect-square sm:tw-h-32 sm:tw-aspect-auto"
+                key={collection.id}
+                collection={collection}
+              />
             ))}
           </div>
           {hasNextPage
-            ? <button onClick={fetchNextPage}>Load more</button>
+            ? (
+              <ControlButton
+                className="tw-mt-4 sm:tw-mt-2 tw-text-3/4"
+                onClick={fetchNextPage}
+              >
+                {i18n.t('loadMore')}
+              </ControlButton>
+              )
             : null
           }
-        </div>
+        </Section>
       </div>
 
       <div className="lg:tw-sticky tw-top-0 tw-h-full sm:tw-col-[1/3] lg:tw-col-[2] sm:tw-row-[3] lg:tw-row-[1/5]">

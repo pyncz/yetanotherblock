@@ -1,7 +1,7 @@
 import type { FC, PropsWithChildren } from 'react'
 import classNames from 'classnames'
 import { AppFooter, LogoLink } from '../../components'
-import { useBreakpoint } from 'src/hooks'
+import { useBreakpoint } from '../../hooks'
 
 interface Props {
   hideWrapping?: boolean

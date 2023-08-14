@@ -28,7 +28,7 @@ export const ErrorView: FC<PropsWithChildren<Props>> = (props) => {
           <div className="tw-space-y-1">
             <div className="tw-max-w-sm tw-mx-auto tw-text-center tw-space-y-1">
               <div className="tw-space-y-6">
-                <LogoSpinner className="tw-mx-auto tw-shadow-[0_2rem_3rem_-2rem_rgb(var(--text-pure))]" />
+                <LogoSpinner className="tw-mx-auto tw-shadow-[0_2rem_3rem_-2rem_rgb(var(--bg-pure))]" />
                 {code
                   ? <h3 className="tw-text-accent-primary tw-font-mono">
                     {code}

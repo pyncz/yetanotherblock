@@ -19,5 +19,12 @@ const config = {
   transpilePackages: [
     '@reservoir0x/reservoir-kit-ui',
   ],
+
+  // Fill allowed domains for next/image
+  images: {
+    domains: [
+      'i.seadn.io',
+    ],
+  },
 }
 export default config
