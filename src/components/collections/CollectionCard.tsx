@@ -14,6 +14,9 @@ export const CollectionCard: FC<PropsWithClassName<Props>> = (props) => {
   const { collection, className } = props
   const showStatsAsOverlay = useBreakpoint('sm')
 
+  const summary = collection.name?.replace(/\s*\|\s*anotherblock/i, '')
+  const [_, name, artist] = summary?.match(/^(.*)\sby\s(.*)$/i) ?? []
+
   return (
     <div className={classNames('tw-relative tw-w-full', className)}>
       <CollectionCover
@@ -44,8 +47,14 @@ export const CollectionCard: FC<PropsWithClassName<Props>> = (props) => {
           : null
         }
 
-        <div className="tw-absolute tw-bottom-3 tw-inset-x-3 tw-line-clamp-2 tw-font-bold tw-uppercase">
-          {collection.name}
+        <div className="tw-absolute tw-bottom-3 tw-inset-x-3 tw-uppercase">
+          {artist
+            ? <div className="tw-line-clamp-2 tw-text-xs tw-text-accent-primary">{artist}</div>
+            : null
+          }
+          <div className={classNames('tw-px-px tw-font-header tw-font-bold', artist ? 'tw-line-clamp-1' : 'tw-line-clamp-2')}>
+            {name ?? summary}
+          </div>
         </div>
       </div>
     </div>
