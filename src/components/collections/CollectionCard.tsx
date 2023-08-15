@@ -1,7 +1,8 @@
+import { useRef } from 'react'
 import type { FC } from 'react'
 import type { useCollections } from '@reservoir0x/reservoir-kit-ui'
 import classNames from 'classnames'
-import { useBreakpoint } from '../../hooks'
+import { useBreakpoint, useImageAccentColor, useSongMetadata } from '../../hooks'
 import type { PropsWithClassName } from '../../models'
 import { CollectionStats } from './CollectionStats'
 import { CollectionCover } from './CollectionCover'
@@ -14,11 +15,18 @@ export const CollectionCard: FC<PropsWithClassName<Props>> = (props) => {
   const { collection, className } = props
   const showStatsAsOverlay = useBreakpoint('sm')
 
-  const summary = collection.name?.replace(/\s*\|\s*anotherblock/i, '')
-  const [_, name, artist] = summary?.match(/^(.*)\sby\s(.*)$/i) ?? []
+  const { name, artist, summary } = useSongMetadata(collection.name)
+
+  const coverImageRef = useRef<HTMLImageElement>(null)
+  const accentColor = useImageAccentColor(coverImageRef)
 
   return (
-    <div className={classNames('tw-relative tw-w-full', className)}>
+    <div
+      className={classNames(
+        'tw-relative tw-w-full tw-duration-normal hover:tw-scale-zoom',
+        className,
+      )}
+    >
       <CollectionCover
         src={collection.banner}
         alt={''}
@@ -31,6 +39,7 @@ export const CollectionCard: FC<PropsWithClassName<Props>> = (props) => {
         )}
       >
         <CollectionCover
+          ref={coverImageRef}
           src={collection.banner}
           alt={collection.name}
           className="tw-z-muted tw-blur-px"
@@ -49,10 +58,17 @@ export const CollectionCard: FC<PropsWithClassName<Props>> = (props) => {
 
         <div className="tw-absolute tw-bottom-3 tw-inset-x-3 tw-uppercase">
           {artist
-            ? <div className="tw-line-clamp-2 tw-text-xs tw-text-accent-primary">{artist}</div>
+            ? (
+              <div
+                className="tw-line-clamp-2 tw-text-xs"
+                style={{ color: accentColor ?? 'rgb(var(--text-dim-2))' }}
+              >
+                {artist}
+              </div>
+              )
             : null
           }
-          <div className={classNames('tw-px-px tw-font-header tw-font-bold', artist ? 'tw-line-clamp-1' : 'tw-line-clamp-2')}>
+          <div className="tw-px-px tw-font-header tw-font-bold tw-line-clamp-2">
             {name ?? summary}
           </div>
         </div>

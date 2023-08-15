@@ -1,4 +1,4 @@
-import type { FC } from 'react'
+import { forwardRef } from 'react'
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 import classNames from 'classnames'
@@ -9,13 +9,15 @@ interface Props {
   alt?: string
 }
 
-export const CollectionCover: FC<PropsWithClassName<Props>> = (props) => {
+export const CollectionCover = forwardRef<HTMLImageElement, PropsWithClassName<Props>>((props, ref) => {
   const { src, alt, className } = props
   const { i18n } = useTranslation()
 
   return src
     ? (
       <Image
+        ref={ref}
+        crossOrigin="anonymous"
         fill
         className={classNames('tw-object-cover', className)}
         src={src}
@@ -23,4 +25,6 @@ export const CollectionCover: FC<PropsWithClassName<Props>> = (props) => {
       />
       )
     : null
-}
+})
+
+CollectionCover.displayName = 'CollectionCover'

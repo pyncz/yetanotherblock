@@ -6,6 +6,8 @@ export * from './useResetableState'
 export * from './useIsMounted'
 export * from './useUncontrolledValue'
 export * from './useBreakpoint'
+export * from './useImageAccentColor'
+export * from './useSongMetadata'
 
 // app hooks
 export * from './useColorMode'

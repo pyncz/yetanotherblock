@@ -42,7 +42,7 @@ const Home: NextPage = () => {
           <div className="tw-grid tw-grid-cols-1 xs:tw-grid-cols-2 sm:tw-grid-cols-1 tw-gap-3">
             {collections.map((collection) => (
               <CollectionCard
-                className="tw-h-32 xs:tw-h-auto xs:tw-aspect-square sm:tw-h-32 sm:tw-aspect-auto"
+                className="tw-h-40 xs:tw-h-auto xs:tw-aspect-square sm:tw-h-36 sm:tw-aspect-auto"
                 key={collection.id}
                 collection={collection}
               />
