@@ -2,15 +2,20 @@ export const addSizeUtils = ({ matchUtilities, theme }) => {
   const size = (value) => ({
     height: value,
     width: value,
-    // minHeight: value,
-    // minWidth: value,
+  })
+
+  const strictSize = (value) => ({
+    ...size(value),
+    minHeight: value,
+    minWidth: value,
   })
 
   matchUtilities(
     {
-      size,
-      circle: (value) => ({
-        ...size(value),
+      'size': size,
+      'strict-size': strictSize,
+      'circle': (value) => ({
+        ...strictSize(value),
         borderRadius: theme('borderRadius.full'),
       }),
     },

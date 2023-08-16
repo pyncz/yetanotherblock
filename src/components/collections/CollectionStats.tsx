@@ -1,7 +1,8 @@
 import classNames from 'classnames'
 import type { FC } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'next-i18next'
 import type { PropsWithClassName } from '../../models'
+import { Price } from '../Price'
 
 interface Props {
   volume: number
@@ -23,7 +24,7 @@ export const CollectionStats: FC<PropsWithClassName<Props>> = (props) => {
       )}
     >
       <small className="tw-flex tw-text-dim-3 tw-text-3/4">{i18n.t('totalVolume')}</small>
-      <p>{volume} <span className="tw-text-7/8 tw-text-dim-2">ETH</span></p>
+      <Price amount={volume} currencySymbol="ETH" />
     </div>
   )
 }

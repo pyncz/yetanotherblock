@@ -8,6 +8,7 @@ export * from './locale'
 export * from './theme'
 export * from './connect'
 export * from './collections'
+export * from './tokens'
 
 // document special components
 export * from './HeadMeta'
@@ -20,3 +21,5 @@ export * from './ConnectedState'
 export * from './CopyButton'
 export * from './LogoSpinner'
 export * from './Section'
+export * from './LoadMoreButton'
+export * from './Price'

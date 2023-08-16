@@ -28,6 +28,8 @@
     "light": "Light",
     "system": "System"
   },
+  "tokenImage": "Token image",
+  "tokens": "items",
   "totalVolume": "total sales",
   "trendingCollections": "trending drops"
 }

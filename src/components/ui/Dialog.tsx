@@ -2,7 +2,7 @@ import * as RadixDialog from '@radix-ui/react-dialog'
 import type { FC, PropsWithChildren, ReactNode } from 'react'
 import { Icon } from '@iconify-icon/react'
 import closeIcon from '@iconify/icons-iconoir/cancel'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'next-i18next'
 
 interface Props {
   trigger: ReactNode

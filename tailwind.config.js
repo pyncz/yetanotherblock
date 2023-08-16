@@ -29,8 +29,8 @@ export default {
       'sm': '0.875rem',
       'normal': '1rem',
       'lg': '1.25rem',
-      'xl': '1.5rem',
-      '2xl': '1.75rem',
+      'xl': '1.375rem',
+      '2xl': '1.625rem',
       '3xl': '2rem',
 
       '3/4': '0.75em',
@@ -140,8 +140,8 @@ export default {
         px: '1px',
       },
       spacing: {
-        nav: '6rem',
         em: '1em',
+        cardPadding: '0.75rem',
       },
       height: {
         ui: 'var(--ui-size)',

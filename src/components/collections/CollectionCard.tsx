@@ -34,7 +34,8 @@ export const CollectionCard: FC<PropsWithClassName<Props>> = (props) => {
       />
       <div
         className={classNames(
-          'tw-absolute tw-overflow-hidden tw-inset-0 sm:tw-rounded tw-border tw-border-base tw-border-opacity-10',
+          'tw-absolute tw-overflow-hidden tw-inset-0 sm:tw-rounded',
+          'tw-border tw-border-base tw-border-opacity-10',
           'before:tw-absolute before:tw-bg-gradient-to-t before:tw-from-[rgba(var(--bg-pure),0.7)] before:tw-to-[rgba(var(--bg-pure),0.3)] before:tw-inset-0',
         )}
       >
@@ -56,7 +57,7 @@ export const CollectionCard: FC<PropsWithClassName<Props>> = (props) => {
           : null
         }
 
-        <div className="tw-absolute tw-bottom-3 tw-inset-x-3 tw-uppercase">
+        <div className="tw-absolute tw-bottom-cardPadding tw-inset-x-cardPadding tw-uppercase">
           {artist
             ? (
               <div
