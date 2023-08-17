@@ -41,7 +41,7 @@ export const RadioGroup = forwardRef<HTMLDivElement, PropsWithClassName<Props>>(
   const hasNoChoice = !!defaultValue && options.length < 2
 
   return (
-    <div className="sm:tw-flex">
+    <div className="tw-inline-flex">
       <RadixRadioGroup.Root
         {...attributes}
         ref={ref}
@@ -49,7 +49,7 @@ export const RadioGroup = forwardRef<HTMLDivElement, PropsWithClassName<Props>>(
         disabled={disabled || hasNoChoice}
         aria-label={ariaLabel}
         className={classNames(
-          'tw-p-1 tw-rounded-xl tw-bg-[rgba(var(--c-radio-bg),_var(--tw-bg-opacity))] tw-duration-fast tw-border-container tw-flex tw-flex-col sm:tw-flex-row tw-gap-1',
+          'tw-p-1 tw-rounded-xl tw-bg-[rgba(var(--radio-bg),_var(--tw-bg-opacity))] tw-duration-fast tw-border-container tw-flex tw-gap-1',
           className,
         )}
         onValueChange={(newValue) => {

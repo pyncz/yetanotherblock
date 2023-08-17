@@ -31,11 +31,12 @@ export const RadioGroupItem = forwardRef<HTMLButtonElement, PropsWithClassName<P
       ref={ref}
       {...attributes}
       className={classNames(
-        'tw-relative tw-p-1 tw-text-center tw-button tw-min-w-[5rem] tw-h-10 before:tw-rounded-lg before:tw-absolute before:tw-inset-0 before:tw-duration-nobg-fast',
+        '[--size:2rem] tw-button-secondary',
+        'tw-h-[--size] tw-min-w-[--size] tw-p-1 tw-text-center tw-button',
         'data-disabled:tw-opacity-muted data-disabled:tw-cursor-not-allowed',
         checked
-          ? 'tw-text-[rgba(var(--c-radio-option-checked-text),_var(--tw-text-opacity))] before:tw-bg-opacity-[var(--o-radio-option-checked-bg)] before:tw-bg-[rgba(var(--c-radio-option-checked-bg),_var(--tw-bg-opacity))] before:tw-scale-normal'
-          : 'tw-text-[rgba(var(--c-radio-option-text),_var(--tw-text-opacity))] hover:tw-text-[rgba(var(--c-radio-option-text--hover),_var(--tw-text-opacity))] before:tw-bg-opacity-[var(--o-radio-option-bg)] before:tw-bg-[rgba(var(--c-radio-option-bg),_var(--tw-bg-opacity))] before:tw-scale-50',
+          ? 'tw-text-[rgba(var(--radio-option-checked-text),_var(--tw-text-opacity))] tw-bg-opacity-[var(--o-radio-option-checked-bg)] tw-bg-[rgba(var(--radio-option-checked-bg),_var(--tw-bg-opacity))]'
+          : 'tw-text-[rgba(var(--radio-option-text),_var(--tw-text-opacity))] hover:tw-text-[rgba(var(--radio-option-text--hover),_var(--tw-text-opacity))] tw-bg-opacity-[var(--o-radio-option-bg)] tw-bg-[rgba(var(--radio-option-bg),_var(--tw-bg-opacity))]',
         className,
       )}
     >

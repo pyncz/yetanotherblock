@@ -21,9 +21,9 @@ export const TokenCard: FC<PropsWithClassName<Props>> = (props) => {
   return (
     <div
       className={classNames(
-        'tw-duration-fast tw-bg-[rgb(var(--bg-card))] tw-rounded tw-flex tw-gap-3',
-        'tw-border tw-border-x3 tw-border-opacity-10',
-        'hover:tw-duration-slow hover:tw-bg-[rgb(var(--bg-card-hover))]',
+        'tw-duration-slow tw-bg-[rgb(var(--bg-card))] tw-rounded tw-flex tw-gap-3',
+        'tw-border tw-border-x1 tw-border-opacity-10',
+        'hover:tw-duration-fast hover:tw-bg-[rgb(var(--bg-card-active))]',
         appearance === 'compact'
           ? 'tw-p-2 tw-items-center'
           : 'tw-flex-col tw-p-cardPadding',

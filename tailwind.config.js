@@ -19,6 +19,7 @@ export default {
     data: {
       open: 'state~="open"',
       closed: 'state~="closed"',
+      checked: 'state~="checked"',
       highlighted: 'highlighted',
       disabled: 'disabled',
       placeholder: 'placeholder',

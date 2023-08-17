@@ -21,7 +21,7 @@
 
   --bg-main: var(--bg-x1);
   --bg-card: var(--bg-x2);
-  --bg-card-hover: var(--bg-x3);
+  --bg-card-active: var(--bg-x3);
 
   /* border */
   --border-x0: 70, 70, 77;
@@ -65,6 +65,17 @@
   --input-disabled-text: var(--text-x3);
   --input-disabled-border: var(--border-x3);
   --input-disabled-placeholder: var(--text-x4);
+  // radio
+  // - container
+  --radio-bg: var(--bg-x3);
+  // - option
+  --radio-option-text: var(--text-x3);
+  --radio-option-text--hover: var(--text-x2);
+  --radio-option-bg: var(--bg-card);
+  --o-radio-option-bg: 1;
+  --radio-option-checked-text: var(--text-x1);
+  --radio-option-checked-bg: var(--bg-card-active);
+  --o-radio-option-checked-bg: 1;
   // select
   // - trigger
   --select-icon: var(--text-x4);

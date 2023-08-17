@@ -20,7 +20,6 @@ export const LayoutMain: FC<PropsWithChildren> = ({ children }) => {
 
         <div className="tw-bg-[red] tw-flex-1">
           Connect / connected state and navigation
-          <ThemeRadio />
         </div>
 
         {placeWrappingIntoSidebar
