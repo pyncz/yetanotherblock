@@ -28,20 +28,20 @@ export const ConnectedState: FC<PropsWithClassName> = ({ className }) => {
         position="top"
         className={classNames(
           'tw-group/box tw-relative tw-flex tw-flex-col xs:tw-flex-row xs:tw-items-center',
-          'before:tw-bg-dim-2 before:tw-rounded-lg before:tw-absolute before:tw-inset-1.5 before:tw-opacity-0 before:tw-duration-normal',
+          'before:tw-bg-x3 before:tw-rounded-lg before:tw-absolute before:tw-inset-1.5 before:tw-opacity-0 before:tw-duration-normal',
           'hover:before:tw-opacity-full hover:before:tw-inset-0',
           className,
         )}
         trigger={
           <button className="tw--m-1.5 tw-p-1.5 tw-inline-flex tw-items-center tw-gap-2 tw-flex-1 tw-ui-element">
-            <div className="tw-relative tw-size-10 tw-rounded tw-bg-dim-3 tw-flex-center">
+            <div className="tw-relative tw-size-10 tw-rounded tw-bg-x4 tw-flex-center">
               {ensAvatar
                 ? <Image src={ensAvatar} alt={i18n.t('ensAvatar')} fill />
-                : <Icon icon={walletIcon} className="tw-text-dim-3 tw-text-lg tw-duration-slow group-hover/box:tw-text-dim-2 group-data-open/box:tw-text-dim-2" />
+                : <Icon icon={walletIcon} className="tw-text-x4 tw-text-lg tw-duration-slow group-hover/box:tw-text-x3 group-data-open/box:tw-text-x3" />
               }
             </div>
             <AddressRepresentation
-              className="tw-relative tw-text-7/8 tw-text-dim-2 group-hover/box:tw-text-dim-1 group-data-open/box:tw-text-dim-1 tw-duration-normal"
+              className="tw-relative tw-text-7/8 tw-text-x3 group-hover/box:tw-text-x2 group-data-open/box:tw-text-x2 tw-duration-normal"
               address={address}
               ensName={ensName}
             />

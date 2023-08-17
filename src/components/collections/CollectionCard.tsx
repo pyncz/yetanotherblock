@@ -23,7 +23,8 @@ export const CollectionCard: FC<PropsWithClassName<Props>> = (props) => {
   return (
     <div
       className={classNames(
-        'tw-relative tw-w-full tw-duration-normal hover:tw-scale-zoom',
+        'dark-mode',
+        'tw-text-x1 tw-relative tw-w-full tw-duration-normal hover:tw-scale-zoom',
         className,
       )}
     >
@@ -35,8 +36,8 @@ export const CollectionCard: FC<PropsWithClassName<Props>> = (props) => {
       <div
         className={classNames(
           'tw-absolute tw-overflow-hidden tw-inset-0 sm:tw-rounded',
-          'tw-border tw-border-base tw-border-opacity-10',
-          'before:tw-absolute before:tw-bg-gradient-to-t before:tw-from-[rgba(var(--bg-pure),0.7)] before:tw-to-[rgba(var(--bg-pure),0.3)] before:tw-inset-0',
+          'tw-border tw-border-x1 tw-border-opacity-10',
+          'before:tw-absolute before:tw-bg-gradient-to-t before:tw-from-[rgba(var(--bg-x0),0.7)] before:tw-to-[rgba(var(--bg-x0),0.3)] before:tw-inset-0',
         )}
       >
         <CollectionCover
@@ -62,7 +63,7 @@ export const CollectionCard: FC<PropsWithClassName<Props>> = (props) => {
             ? (
               <div
                 className="tw-line-clamp-2 tw-text-xs"
-                style={{ color: accentColor ?? 'rgb(var(--text-dim-2))' }}
+                style={{ color: accentColor ?? 'rgb(var(--text-x3))' }}
               >
                 {artist}
               </div>

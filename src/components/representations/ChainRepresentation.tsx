@@ -31,7 +31,7 @@ export const ChainRepresentation: FC<PropsWithClassName<Props>> = (props) => {
       className={classNames('tw-font-mono', className)}
       label={chainName}
       image={(
-        <div className="tw-circle-[2em] tw-relative tw-bg-dim-2 tw-flex-center">
+        <div className="tw-circle-[2em] tw-relative tw-bg-x3 tw-flex-center">
           {logo
             ? (
               <div className="tw-absolute tw-inset-[0.375em]">
@@ -42,7 +42,7 @@ export const ChainRepresentation: FC<PropsWithClassName<Props>> = (props) => {
                 />
               </div>
               )
-            : <Icon icon={chainIcon} className="tw-text-dim-2 tw-text-normal" />
+            : <Icon icon={chainIcon} className="tw-text-x3 tw-text-normal" />
           }
         </div>
       )}

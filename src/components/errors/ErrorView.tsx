@@ -28,7 +28,7 @@ export const ErrorView: FC<PropsWithChildren<Props>> = (props) => {
           <div className="tw-space-y-1">
             <div className="tw-max-w-sm tw-mx-auto tw-text-center tw-space-y-1">
               <div className="tw-space-y-6">
-                <LogoSpinner className="tw-mx-auto tw-shadow-[0_2rem_3rem_-2rem_rgb(var(--bg-pure))]" />
+                <LogoSpinner className="tw-mx-auto tw-shadow-[0_2rem_3rem_-2rem_rgb(var(--bg-x0))]" />
                 {code
                   ? <h3 className="tw-text-accent-primary tw-font-mono">
                     {code}
@@ -37,12 +37,12 @@ export const ErrorView: FC<PropsWithChildren<Props>> = (props) => {
                 }
               </div>
               <div>
-                <h2 className="tw-mb-4 tw-text-base">
+                <h2 className="tw-mb-4 tw-text-x1">
                   {title}
                 </h2>
                 {description
                   ? (
-                    <p className="tw-text-dim-2">
+                    <p className="tw-text-x3">
                       {description}
                     </p>
                     )

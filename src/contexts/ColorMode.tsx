@@ -35,9 +35,7 @@ export const ColorModeContext = createContext<ColorModeContextType>({
 
 export const ColorModeProvider: FC<PropsWithChildren> = ({ children }) => {
   // On mounted, populate color mode from localStorage
-  const [colorMode, setColorMode] = useLocalStorage<ColorModeValue>(THEME_LOCAL_STORAGE_KEY, null, {
-    raw: true,
-  })
+  const [colorMode, setColorMode] = useLocalStorage<ColorModeValue>(THEME_LOCAL_STORAGE_KEY, null)
 
   const prefersDarkMode = usePrefersDarkMode()
   const colorPreference = useMemo(() => {

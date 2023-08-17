@@ -4,7 +4,7 @@
 export const fill = (
   volume,
   valueGetter,
-  keyGetter = (i) => `${i + 1}`,
+  keyGetter = (i) => `${i}`,
 ) => {
   const config = {}
   for (let i = 0; i < volume; i++) {

@@ -48,11 +48,9 @@ export default {
     colors: {
       black: co('--black'),
       white: co('--white'),
-      pure: co('--bg-pure'),
       accent: {
         primary: co('--accent-primary'),
         secondary: co('--accent-secondary'),
-        tertiary: co('--accent-tertiary'),
       },
       state: {
         error: co('--state-error'),
@@ -78,18 +76,15 @@ export default {
     // skins
     textColor: (theme) => ({
       ...theme('colors'),
-      base: co('--text-base'),
-      dim: fill(3, (i) => co(`--text-dim-${i + 1}`)),
+      ...fill(5, (i) => co(`--text-x${i}`), (i) => `x${i}`),
     }),
     backgroundColor: (theme) => ({
       ...theme('colors'),
-      base: co('--bg-base'),
-      dim: fill(3, (i) => co(`--bg-dim-${i + 1}`)),
+      ...fill(5, (i) => co(`--bg-x${i}`), (i) => `x${i}`),
     }),
     borderColor: (theme) => ({
       ...theme('colors'),
-      base: co('--border-base'),
-      dim: fill(3, (i) => co(`--border-dim-${i + 1}`)),
+      ...fill(4, (i) => co(`--border-x${i}`), (i) => `x${i}`),
       transparent: 'transparent',
     }),
     borderRadius: {
@@ -119,7 +114,7 @@ export default {
       none: 'none',
       card: '0 0 0.25rem 0 rgba(2, 8, 154, 0.25)',
       connect: '0 2.25rem 3.5rem -3.5rem var(--tw-shadow-color)',
-      popup: '0 0 0 1px rgba(var(--border-dim-2), 0.5), 0 0.75rem 1.75rem -1.75rem rgba(var(--text-base), 0.25)',
+      popup: '0 0 0 1px rgba(var(--border-x2), 0.5), 0 0.75rem 1.75rem -1.75rem rgba(var(--text-x1), 0.25)',
     },
     transitionDuration: {
       fast: '150ms',

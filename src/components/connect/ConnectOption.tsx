@@ -37,9 +37,9 @@ const Card: FC<PropsWithClassName<PropsWithChildren<CardProps>>> = (props) => {
   return (
     <div
       className={classNames(
-        '[--accent:rgb(var(--bg-dim-1))] tw-shadow-[--accent]',
-        'tw-bg-dim-1 group-hover/card:tw-bg-dim-2 tw-duration-normal tw-rounded-lg tw-p-2 tw-flex-center tw-relative tw-overflow-hidden tw-shadow-connect tw-border-opacity-10',
-        'tw-ring tw-ring-offset-2 tw-ring-opacity-muted tw-ring-offset-[rgb(var(--bg-base))] tw-ring-[transparent] group-focus/card:tw-ring-[--accent]',
+        '[--accent:rgb(var(--bg-x2))] tw-shadow-[--accent]',
+        'tw-bg-x2 group-hover/card:tw-bg-x3 tw-duration-normal tw-rounded-lg tw-p-2 tw-flex-center tw-relative tw-overflow-hidden tw-shadow-connect tw-border-opacity-10',
+        'tw-ring tw-ring-offset-2 tw-ring-opacity-muted tw-ring-offset-[rgb(var(--bg-x1))] tw-ring-[transparent] group-focus/card:tw-ring-[--accent]',
         'before:tw-absolute before:tw--inset-[1rem] before:tw-blur-[1rem] before:tw-animate-spin before:[animationDuration:50s]',
         { 'tw-p-6 tw-border !tw-bg-[--accent] tw-border-[--accent]': branded },
         className,
@@ -48,7 +48,7 @@ const Card: FC<PropsWithClassName<PropsWithChildren<CardProps>>> = (props) => {
       <div
         className={classNames(
           'tw-flex-center tw-inline-flex tw-duration-normal tw-relative group-hover/card:tw-scale-zoom group-focus/card:tw-scale-zoom',
-          { 'tw-circle-20 tw-bg-dim-1': branded },
+          { 'tw-circle-20 tw-bg-x2': branded },
         )}
       >
         <Image
@@ -84,7 +84,7 @@ const Root: FC<PropsWithClassName<PropsWithChildren<RootProps>>> = (props) => {
       {withSubtitle
         ? (
           <div className="tw-flex-center-x">
-            <h5 className="tw-duration-normal tw-px-2 tw-py-1 tw-rounded-sm tw-bg-dim-2 tw-text-dim-2 group-hover/card:tw-bg-dim-3 group-hover/card:tw-scale-zoom tw-relative group-hover/card:tw-text-dim-1 group-focus/card:tw-bg-dim-3 group-focus/card:tw-text-dim-1">
+            <h5 className="tw-duration-normal tw-px-2 tw-py-1 tw-rounded-sm tw-bg-x3 tw-text-x3 group-hover/card:tw-bg-x4 group-hover/card:tw-scale-zoom tw-relative group-hover/card:tw-text-x2 group-focus/card:tw-bg-x4 group-focus/card:tw-text-x2">
               {name}
               {isLoading && pendingConnector?.id === connector.id
                 ? <>{' '}<Spinner /></>

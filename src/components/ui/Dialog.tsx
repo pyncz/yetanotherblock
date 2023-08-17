@@ -21,8 +21,8 @@ export const Dialog: FC<PropsWithChildren<Props>> = (props) => {
         {trigger}
       </RadixDialog.Trigger>
       <RadixDialog.Portal>
-        <RadixDialog.Overlay className="tw-bg-dim-3 tw-bg-opacity-muted tw-fixed tw-inset-0 tw-animate-fadeIn" />
-        <RadixDialog.Content className="tw-outline-none tw-rounded-xl tw-overflow-auto tw-p-8 tw-shadow-popup tw-bg-base tw-animate-popUp tw-fixed tw-top-1/2 tw-left-1/2 tw--translate-x-1/2 tw--translate-y-1/2 tw-w-full tw-max-w-md tw-max-h-[80vh]">
+        <RadixDialog.Overlay className="tw-bg-x3 tw-bg-opacity-muted tw-fixed tw-inset-0 tw-animate-fadeIn" />
+        <RadixDialog.Content className="tw-outline-none tw-rounded-xl tw-overflow-auto tw-p-8 tw-shadow-popup tw-bg-x1 tw-animate-popUp tw-fixed tw-top-1/2 tw-left-1/2 tw--translate-x-1/2 tw--translate-y-1/2 tw-w-full tw-max-w-md tw-max-h-[80vh]">
           {title || description
             ? (
               <div className="tw-space-y-4 tw-pb-5">
@@ -36,7 +36,7 @@ export const Dialog: FC<PropsWithChildren<Props>> = (props) => {
                 }
                 {description
                   ? (
-                    <RadixDialog.Description className="tw-text-center tw-text-dim-2 tw-text-sm tw-pb-3">
+                    <RadixDialog.Description className="tw-text-center tw-text-x3 tw-text-sm tw-pb-3">
                       {description}
                     </RadixDialog.Description>
                     )

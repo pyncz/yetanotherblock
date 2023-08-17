@@ -29,7 +29,7 @@ export const ThemeRadio: FC<PropsWithClassName> = ({ className }) => {
               colorMode === 'system'
                 ? (
                   // Tell which theme is "system"
-                  <span className="tw-block tw-text-dim-3 tw-text-xs">
+                  <span className="tw-block tw-text-x4 tw-text-xs">
                     {i18n.t(`theme.${fallbackTheme}`)}
                   </span>
                   )

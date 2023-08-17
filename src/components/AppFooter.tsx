@@ -10,7 +10,7 @@ export const AppFooter: FC<PropsWithClassName> = ({ className }) => {
 
   return (
     <footer className={className}>
-      <p className="tw-text-xs tw-text-dim-3 tw-px-1">
+      <p className="tw-text-xs tw-text-x4 tw-px-1">
         <span>{years}.</span>{' '}
         <span>{i18n.t('madeBy')}</span>{' '}
         <ExternalLink

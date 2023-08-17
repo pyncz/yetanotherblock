@@ -1,37 +1,38 @@
-// FIXME: Change to light mode (currently it duplicates the dark mode)
 @mixin light-mode {
-  --accent-primary-vivid: var(--accent-primary-lighten);
-  --accent-primary-muted: var(--accent-primary-darken);
+  --accent-primary-vivid: var(--accent-primary-darken);
+  --accent-primary-muted: var(--accent-primary-lighten);
 
-  --accent-secondary-vivid: var(--accent-secondary-lighten);
-  --accent-secondary-muted: var(--accent-secondary-darken);
-
-  --accent-tertiary-vivid: var(--accent-tertiary-lighten);
-  --accent-tertiary-muted: var(--accent-tertiary-darken);
+  --accent-secondary-vivid: var(--accent-secondary-darken);
+  --accent-secondary-muted: var(--accent-secondary-lighten);
 
   /* text */
-  --bg-pure: var(--black);
-  --text-base: 250, 250, 252;
-  --text-dim-1: 200, 200, 203;
-  --text-dim-2: 138, 138, 142;
-  --text-dim-3: 64, 64, 69;
+  --text-x0: var(--black);
+  --text-x1: 24, 24, 28;
+  --text-x2: 85, 85, 90;
+  --text-x3: 120, 120, 126;
+  --text-x4: 160, 160, 167;
   
   /* bg */
-  --bg-base: 20, 20, 23;
-  --bg-dim-1: 24, 24, 27;
-  --bg-dim-2: 28, 28, 34;
-  --bg-dim-3: 34, 34, 40;
+  --bg-x0: var(--white);
+  --bg-x1: 245, 245, 249;
+  --bg-x2: 240, 240, 246;
+  --bg-x3: 232, 232, 240;
+  --bg-x4: 225, 225, 235;
+
+  --bg-main: var(--bg-x3);
+  --bg-card: var(--bg-x1);
+  --bg-card-hover: var(--bg-x0);
 
   /* border */
-  --border-base: 70, 70, 77;
-  --border-dim-1: 50, 50, 56;
-  --border-dim-2: 35, 35, 40;
-  --border-dim-3: 25, 25, 29;
+  --border-x0: 202, 202, 208;
+  --border-x1: 218, 218, 223;
+  --border-x2: 230, 230, 234;
+  --border-x3: 238, 238, 241;
 
   /* State */
-  --state-error: 255, 128, 142;
-  --state-success: 39, 241, 110;
-  --state-warning: 253, 220, 53;
+  --state-error: 255, 51, 75;
+  --state-success: 14, 216, 84;
+  --state-warning: 242, 174, 2;
 
   /* UI */
   --ui-size: 2.75em;
@@ -46,49 +47,45 @@
   --button-primary-bg-vivid: var(--accent-primary-vivid);
   --button-primary-color: var(--white);
   --button-primary-color-vivid: var(--white);
-  --button-secondary-bg: var(--bg-dim-2);
-  --button-secondary-bg-vivid: var(--bg-dim-3);
+  --button-secondary-bg: var(--bg-x3);
+  --button-secondary-bg-vivid: var(--bg-x4);
   --button-secondary-color: var(--white);
   --button-secondary-color-vivid: var(--white);
   // input
-  --input-bg: var(--bg-base);
-  --input-text: var(--text-dim-1);
-  --input-border: var(--border-dim-2);
-  --input-border--hover: var(--border-dim-1);
+  --input-bg: var(--bg-x1);
+  --input-text: var(--text-x2);
+  --input-border: var(--border-x2);
+  --input-border--hover: var(--border-x1);
   --input-border--focus: var(--accent-secondary);
   --input-border--focus-hover: var(--accent-secondary-vivid);
-  --input-placeholder: var(--text-dim-3);
+  --input-placeholder: var(--text-x4);
   --input-readonly-bg: transparent;
-  --input-readonly-text: var(--text-dim-2);
-  --input-disabled-bg: var(--bg-dim-1);
-  --input-disabled-text: var(--text-dim-2);
-  --input-disabled-border: var(--border-dim-3);
-  --input-disabled-placeholder: var(--text-dim-3);
+  --input-readonly-text: var(--text-x3);
+  --input-disabled-bg: var(--bg-x2);
+  --input-disabled-text: var(--text-x3);
+  --input-disabled-border: var(--border-x3);
+  --input-disabled-placeholder: var(--text-x4);
   // select
   // - trigger
-  --select-icon: var(--text-dim-3);
+  --select-icon: var(--text-x4);
   // - container
-  --select-arrow: var(--text-dim-3);
-  --select-arrow--hover: var(--text-dim-2);
-  --select-content-bg: var(--bg-dim-2);
-  --select-content-border: var(--border-dim-2);
+  --select-arrow: var(--text-x4);
+  --select-arrow--hover: var(--text-x3);
+  --select-content-bg: var(--bg-x3);
+  --select-content-border: var(--border-x2);
   // - option
-  --select-option-text: var(--text-dim-2);
-  --select-option-text--hover: var(--text-dim-1);
-  --select-option-text--highlighted: var(--text-dim-1);
-  --select-option-disabled-text: var(--text-dim-3);
-  --select-option-bg: var(--bg-dim-1);
+  --select-option-text: var(--text-x3);
+  --select-option-text--hover: var(--text-x2);
+  --select-option-text--highlighted: var(--text-x2);
+  --select-option-disabled-text: var(--text-x4);
+  --select-option-bg: var(--bg-x2);
   --o-select-option-bg: 0;
-  --select-option-bg--hover: var(--bg-dim-1);
+  --select-option-bg--hover: var(--bg-x2);
   --o-select-option-bg--hover: 1;
-  --select-option-checked-text: var(--text-base);
-  --select-option-checked-text--hover: var(--text-base);
-  --select-option-checked-bg: var(--bg-base);
+  --select-option-checked-text: var(--text-x1);
+  --select-option-checked-text--hover: var(--text-x1);
+  --select-option-checked-bg: var(--bg-x1);
   --o-select-option-checked-bg: 1;
 
   --o-ring: 0.2;
-
-  /* Elements */
-  // sidebar
-  --bg-sidebar: var(--bg-dim-1);
 }

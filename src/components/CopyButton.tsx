@@ -23,7 +23,7 @@ export const CopyButton: FC<PropsWithChildren<PropsWithClassName<Props>>> = (pro
           onClick={copy}
         >
           {children
-            ? <span className="tw-text-dim-1">{children}</span>
+            ? <span className="tw-text-x2">{children}</span>
             : null
           }
           <Icon

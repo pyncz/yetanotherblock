@@ -15,7 +15,7 @@ export const Price: FC<PropsWithClassName<Props>> = (props) => {
 
       {currencySymbol
         ? (
-          <span className="tw-text-7/8 tw-pl-1 tw-text-dim-2">
+          <span className="tw-text-7/8 tw-pl-[0.25em] tw-text-x3">
             {currencySymbol}
           </span>
           )

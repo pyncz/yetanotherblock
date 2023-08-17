@@ -35,7 +35,7 @@ const Placeholder: FC<PropsWithClassName<SkeletonPlaceholderProps>> = (props) =>
 
   return (
     <Wrapper
-      className={classNames('tw-animate-pulse tw-inline-flex tw-rounded tw-bg-dim-2', className)}
+      className={classNames('tw-animate-pulse tw-inline-flex tw-rounded tw-bg-x3', className)}
       style={{ width, height }}
     />
   )

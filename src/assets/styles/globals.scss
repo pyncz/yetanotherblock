@@ -6,7 +6,7 @@
 @layer base {
   html {
     @apply tw-text-[20px] sm:tw-text-[16px]; // 1 rem
-    @apply tw-text-base tw-bg-base tw-font-sans tw-leading-md tw-relative;
+    @apply tw-text-x1 tw-bg-[rgb(var(--bg-main))] tw-font-sans tw-leading-md tw-relative;
     @apply before:tw-opacity-[0.02] before:tw-z-muted before:tw-absolute before:tw-inset-0 before:tw-pointer-events-none;
     &::before {
       background-image: radial-gradient(circle closest-corner at center 10%, rgb(var(--accent-primary)), rgba(var(--accent-primary), 0) 90%);
@@ -28,7 +28,7 @@
     appearance: none;
   }
   ::selection {
-    @apply tw-text-accent-secondary tw-bg-dim-3;
+    @apply tw-text-accent-secondary tw-bg-x4;
   }
   :root {
     /* COMMON PALETTE */
@@ -43,14 +43,12 @@
     --accent-secondary-lighten: 255, 51, 184; // #ff33b8
     --accent-secondary-darken: 214, 0, 139; // #d6008b
 
-    --accent-tertiary: 255, 119, 61; // #FF773D
-    --accent-tertiary-lighten: 255, 137, 87; // #FF8957
-    --accent-tertiary-darken: 255, 94, 26; // #FF5E1A
-
     /* COLOR MODES */
     @include themes.light-mode;
-    @media (prefers-color-scheme: dark) {
-      @include themes.dark-mode;
+    &:not(.light-mode,.dark-mode) {
+      @media (prefers-color-scheme: dark) {
+        @include themes.dark-mode;
+      }
     }
   }
 

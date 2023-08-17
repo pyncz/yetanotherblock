@@ -33,7 +33,7 @@ export const Representation: FC<PropsWithChildren<PropsWithClassName<Props>>> = 
       <div className="tw-truncate tw-flex-col tw-flex-center-x">
         <div className="tw-truncate">{children ?? label}</div>
         {description
-          ? <small className="tw-text-dim-2 tw-mt-[0.125em]">{description}</small>
+          ? <small className="tw-text-x3 tw-mt-[0.125em]">{description}</small>
           : null
         }
       </div>

@@ -29,8 +29,8 @@ export const addPopup = ({ addComponents, theme }) => {
       '--tw-text-opacity': '1',
       '--tw-bg-opacity': '1',
 
-      'backgroundColor': c('--bg-dim-3', '0.20'),
-      'color': c('--text-dim-2', 'var(--tw-text-opacity)'),
+      'backgroundColor': c('--bg-x4', '0.20'),
+      'color': c('--text-x3', 'var(--tw-text-opacity)'),
 
       'lineHeight': '1',
       'userSelect': 'none',
@@ -64,7 +64,7 @@ export const addPopup = ({ addComponents, theme }) => {
       },
     },
     '.popup-arrow': {
-      fill: c('--bg-dim-2'),
+      fill: c('--bg-x3'),
     },
   })
 }

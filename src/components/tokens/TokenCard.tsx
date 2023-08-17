@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next'
 import classNames from 'classnames'
 import type { PropsWithClassName } from '../../models'
 import { Price } from '../Price'
-import { useSongMetadata } from 'src/hooks'
+import { useSongMetadata } from '../../hooks'
 
 type TokenCardAppearance = 'full' | 'compact'
 type Props = ReturnType<typeof useTokens>['data'][number] & {
@@ -21,9 +21,9 @@ export const TokenCard: FC<PropsWithClassName<Props>> = (props) => {
   return (
     <div
       className={classNames(
-        'tw-duration-fast tw-bg-dim-1 tw-rounded tw-flex tw-gap-3',
-        'tw-border tw-border-base tw-border-opacity-10',
-        'hover:tw-duration-slow hover:tw-bg-dim-2',
+        'tw-duration-fast tw-bg-[rgb(var(--bg-card))] tw-rounded tw-flex tw-gap-3',
+        'tw-border tw-border-x3 tw-border-opacity-10',
+        'hover:tw-duration-slow hover:tw-bg-[rgb(var(--bg-card-hover))]',
         appearance === 'compact'
           ? 'tw-p-2 tw-items-center'
           : 'tw-flex-col tw-p-cardPadding',
@@ -32,7 +32,7 @@ export const TokenCard: FC<PropsWithClassName<Props>> = (props) => {
     >
       <div
         className={classNames(
-          'tw-bg-dim-3 tw-rounded-sm tw-overflow-hidden tw-relative',
+          'tw-bg-x4 tw-rounded-sm tw-overflow-hidden tw-relative',
           appearance === 'compact'
             ? 'tw-strict-size-12'
             : 'tw-w-full tw-aspect-square',
@@ -62,7 +62,7 @@ export const TokenCard: FC<PropsWithClassName<Props>> = (props) => {
           {name}
         </div>
 
-        <div className="tw-flex tw-flex-wrap tw-text-xs tw-gap-x-2 tw-text-dim-2">
+        <div className="tw-flex tw-flex-wrap tw-text-xs tw-gap-x-2 tw-text-x3">
           {market?.floorAsk?.price?.amount?.decimal
             ? (
               <Price

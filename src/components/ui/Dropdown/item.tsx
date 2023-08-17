@@ -11,7 +11,7 @@ export const DropdownItem: FC<PropsWithChildren<Props>> = (props) => {
   return (
     <RadixDropdown.Item
       asChild
-      className="tw-text-sm !tw-outline-none tw-rounded-sm tw-py-2 tw-px-1.5 tw-duration-fast tw-text-dim-2 hover:tw-text-dim-1 hover:tw-bg-dim-3 data-highlighted:tw-bg-dim-3"
+      className="tw-text-sm !tw-outline-none tw-rounded-sm tw-py-2 tw-px-1.5 tw-duration-fast tw-text-x3 hover:tw-text-x2 hover:tw-bg-x4 data-highlighted:tw-bg-x4"
       {...attributes}
     >
       <button className="tw-flex-center-y tw-gap-1">

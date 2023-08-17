@@ -14,7 +14,7 @@ export const getUiElement = (theme) => {
 
     'outline': 'none !important',
     'lineHeight': '1',
-    'borderRadius': theme('borderRadius.DEFAULT'),
+    'borderRadius': theme('borderRadius.sm'),
     'transitionDuration': theme('transitionDuration.normal'),
     '&:hover': {
       transitionDuration: theme('transitionDuration.fast'),
