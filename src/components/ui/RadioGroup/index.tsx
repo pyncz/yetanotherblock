@@ -49,7 +49,7 @@ export const RadioGroup = forwardRef<HTMLDivElement, PropsWithClassName<Props>>(
         disabled={disabled || hasNoChoice}
         aria-label={ariaLabel}
         className={classNames(
-          'tw-p-1 tw-rounded-xl tw-bg-[rgba(var(--radio-bg),_var(--tw-bg-opacity))] tw-duration-fast tw-border-container tw-flex tw-gap-1',
+          'tw-p-1 tw-rounded tw-bg-[rgba(var(--radio-bg),_var(--tw-bg-opacity))] tw-bg-opacity-[--o-radio-bg] tw-duration-fast tw-border-container tw-flex',
           className,
         )}
         onValueChange={(newValue) => {

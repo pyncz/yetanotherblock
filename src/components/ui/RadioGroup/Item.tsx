@@ -31,7 +31,7 @@ export const RadioGroupItem = forwardRef<HTMLButtonElement, PropsWithClassName<P
       ref={ref}
       {...attributes}
       className={classNames(
-        '[--size:2rem] tw-button-secondary',
+        '[--size:1.875rem] tw-button-secondary',
         'tw-h-[--size] tw-min-w-[--size] tw-p-1 tw-text-center tw-button',
         'data-disabled:tw-opacity-muted data-disabled:tw-cursor-not-allowed',
         checked
