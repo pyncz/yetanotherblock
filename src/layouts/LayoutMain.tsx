@@ -10,16 +10,11 @@ export const LayoutMain: FC<PropsWithChildren> = ({ children }) => {
   const placeWrappingIntoSidebar = useBreakpoint('lg')
 
   return (
-    <LayoutBase hideLogo={placeWrappingIntoSidebar} hideFooter={placeWrappingIntoSidebar}>
+    <LayoutBase hideLogo={placeWrappingIntoSidebar} hideFooter>
       <div className="lg:tw-sticky tw-top-0 lg:tw-min-h-full sm:tw-col-[1/3] lg:tw-col-[1] sm:tw-row-[2/3] lg:tw-row-[1/5] tw-gap-3 tw-flex tw-flex-col">
-        {placeWrappingIntoSidebar
-          ? (
-            <div className="tw-inline-flex">
-              <LogoLink />
-            </div>
-            )
-          : null
-        }
+        <div className="tw-hidden lg:tw-inline-flex">
+          <LogoLink />
+        </div>
 
         <div
           className={classNames(
@@ -35,10 +30,7 @@ export const LayoutMain: FC<PropsWithChildren> = ({ children }) => {
           </h1>
         </div>
 
-        {placeWrappingIntoSidebar
-          ? <AppFooter />
-          : null
-        }
+        <AppFooter className="tw-hidden lg:tw-flex" />
       </div>
 
       {children}

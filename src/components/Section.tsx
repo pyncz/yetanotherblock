@@ -15,7 +15,7 @@ export const Section: FC<PropsWithClassName<PropsWithChildren<Props>>> = (props)
         ? <h3>{title}</h3>
         : title
       }
-      <div className="sm:tw-pb-6">
+      <div className="sm:tw-pb-[--p-main]">
         {children}
       </div>
     </section>

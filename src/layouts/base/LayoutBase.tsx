@@ -2,14 +2,15 @@ import type { FC, PropsWithChildren } from 'react'
 import classNames from 'classnames'
 import { AppFooter, LogoLink } from '../../components'
 import { useBreakpoint } from '../../hooks'
+import type { PropsWithClassName } from '../../models'
 
 interface Props {
   hideLogo?: boolean
   hideFooter?: boolean
 }
 
-export const LayoutBase: FC<PropsWithChildren<Props>> = (props) => {
-  const { hideLogo, hideFooter, children } = props
+export const LayoutBase: FC<PropsWithClassName<PropsWithChildren<Props>>> = (props) => {
+  const { hideLogo, hideFooter, children, className } = props
 
   const showFullLogo = useBreakpoint('xs')
 
@@ -19,6 +20,7 @@ export const LayoutBase: FC<PropsWithChildren<Props>> = (props) => {
         '[background:radial-gradient(400px_320px_at_0%_0%,_rgba(194,244,255,0.08)_0%,_rgba(234,0,14,0)_100%,_rgba(131,0,234,0)_100%)]',
         '[--side-w:14rem] md:[--side-w:16rem] lg:[--side-w:18rem] xl:[--side-w:21rem] 2xl:[--side-w:24rem]',
         'tw-h-screen tw-p-[--p-main] tw-overflow-auto tw-grid-main sm:tw-grid-cols-[minmax(var(--side-w),_1fr)_minmax(0,_4fr)_minmax(var(--side-w),_1fr)] sm:tw-grid-rows-[auto_auto_minmax(0,_1fr)_auto]',
+        className,
       )}
     >
       {hideLogo

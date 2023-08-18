@@ -2,7 +2,7 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import type { GetServerSideProps, NextPage } from 'next'
 import i18nextConfig from '../../next-i18next.config'
-import { HeadMeta, TokensSection, TrendingCollectionsSection } from '../components'
+import { AppFooter, HeadMeta, TokensSection, TrendingCollectionsSection } from '../components'
 
 export const getServerSideProps: GetServerSideProps = async ({
   locale,
@@ -30,8 +30,9 @@ const Home: NextPage = () => {
         <TrendingCollectionsSection />
       </div>
 
-      <div className="lg:tw-sticky tw-top-0 sm:tw-col-[1/3] lg:tw-col-[2] sm:tw-row-[3] lg:tw-row-[1/5] lg:tw-min-h-full">
+      <div className="tw-space-y-4 lg:tw-sticky tw-top-0 sm:tw-col-[1/3] lg:tw-col-[2] sm:tw-row-[3] lg:tw-row-[1/5] lg:tw-min-h-full">
         <TokensSection />
+        <AppFooter className="lg:tw-hidden tw-pb-6" />
       </div>
     </>
   )
