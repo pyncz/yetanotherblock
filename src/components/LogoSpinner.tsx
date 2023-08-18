@@ -13,7 +13,7 @@ export const LogoSpinner: FC<PropsWithClassName> = ({ className }) => {
           '[--accent:--accent-primary-lighten] after:tw-z-muted after:tw-animate-spin after:[animationDuration:4s] after:[--swing-angle:30deg] after:tw-absolute after:tw-inset-0 after:tw-bg-[conic-gradient(rgba(var(--accent),0)_26%,_rgba(var(--accent),0.25)_38%,_rgba(var(--accent),0)_50%)]',
         )}
       >
-        <div className="tw-circle-[40%] tw-bg-white tw-absolute tw-top-1/2 tw-left-1/2 tw--translate-x-1/2 tw--translate-y-1/2" />
+        <div className="tw-circle-[40%] tw-bg-[rgb(var(--spinner-accent))] tw-absolute tw-top-1/2 tw-left-1/2 tw--translate-x-1/2 tw--translate-y-1/2" />
       </div>
     </div>
   )

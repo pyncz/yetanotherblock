@@ -14,6 +14,10 @@
     "serverErrorMessage": "Yeeeah, it wasn't supposed to be like this. No worries, we will fix it.",
     "unexpected": "unexpected error."
   },
+  "hero": [
+    "Investing in music",
+    "- made easy"
+  ],
   "loadMore": "Load more",
   "logo": "{{name}} logo",
   "madeBy": "Made by",
