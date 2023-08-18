@@ -21,6 +21,7 @@ export const addButton = ({ addComponents, addUtilities, theme }) => {
       '--ui-ring': 'var(--x-button-bg)',
 
       'cursor': 'pointer',
+      'whiteSpace': 'nowrap',
       'gap': theme('gap.1'),
       'display': 'inline-flex',
       'justifyContent': 'center',

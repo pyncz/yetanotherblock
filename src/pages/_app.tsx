@@ -18,10 +18,10 @@ const App: AppType = ({ Component, pageProps }: AppPropsWithLayout) => {
 
   // init web3
   const chains: Chain[] = env.NEXT_PUBLIC_ENV === 'production'
-    ? [mainnet]
+    ? [mainnet] // prod
     : env.NEXT_PUBLIC_ENV === 'test'
-      ? [goerli, sepolia]
-      : [goerli, sepolia, hardhat]
+      ? [goerli, sepolia] // test
+      : [goerli, sepolia, hardhat] // dev
 
   const config = configWeb3(chains)
 

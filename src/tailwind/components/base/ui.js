@@ -13,8 +13,9 @@ export const getUiElement = (theme) => {
     'padding': 'var(--ui-py) var(--ui-px)',
 
     'outline': 'none !important',
+    'textTransform': 'uppercase',
     'lineHeight': '1',
-    'borderRadius': theme('borderRadius.sm'),
+    'borderRadius': theme('borderRadius.xs'),
     'transitionDuration': theme('transitionDuration.normal'),
     '&:hover': {
       transitionDuration: theme('transitionDuration.fast'),

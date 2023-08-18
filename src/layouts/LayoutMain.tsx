@@ -19,7 +19,7 @@ export const LayoutMain: FC<PropsWithChildren> = ({ children }) => {
         <div
           className={classNames(
             'dark-mode',
-            'tw-relative tw-text-x1 tw-px-2 xs:tw-px-4 sm:tw-px-6 tw-py-12 tw-min-h-[13rem] tw-flex-1 tw-rounded tw-border tw-border-x1 tw-border-opacity-10 tw-grid tw-grid-rows-4',
+            'tw-relative tw-overflow-hidden tw-text-x1 tw-px-2 xs:tw-px-4 sm:tw-px-6 tw-py-12 tw-min-h-[13rem] tw-flex-1 tw-rounded tw-border tw-border-x1 tw-border-opacity-10 tw-grid tw-grid-rows-4',
             'tw-bg-[url(/img/hero-bg.jpg)] tw-bg-cover',
             'after:tw-absolute after:tw-inset-0 after:tw-bg-[url(/img/hero-stuff.png)] after:tw-bg-cover after:tw-bg-bottom',
           )}

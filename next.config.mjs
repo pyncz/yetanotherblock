@@ -22,8 +22,12 @@ const config = {
 
   // Fill allowed domains for next/image
   images: {
-    domains: [
-      'i.seadn.io',
+    remotePatterns: [
+      {
+        // For marketplace icons and tokens' and collections' images
+        protocol: 'https',
+        hostname: '**',
+      },
     ],
   },
 }

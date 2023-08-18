@@ -1,4 +1,6 @@
 {
+  "buy": "Buy",
+  "buyNow": "Buy now",
   "chainName": "{{name}} chain",
   "close": "Close",
   "collectionCover": "Collection cover",
