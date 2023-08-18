@@ -115,7 +115,7 @@ export const TokenCard: FC<PropsWithClassName<Props>> = (props) => {
               className={classNames(
                 'tw-flex tw-duration-fast tw-gap-2 tw-items-center',
                 isCompactView
-                  ? 'sm:tw-hidden sm:tw-opacity-0 sm:group-hover/card:tw-flex sm:group-hover/card:tw-opacity-full'
+                  ? 'sm:tw-hidden sm:group-hover/card:tw-flex'
                   : 'tw-w-full',
               )}
             >

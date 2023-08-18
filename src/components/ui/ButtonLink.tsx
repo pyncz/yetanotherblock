@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import type { FC } from 'react'
-import classNames from 'classnames'
 import type { ButtonProps, PropsWithClassName } from '../../models'
 import { Button } from './Button'
 
@@ -19,7 +18,7 @@ export const ButtonLink: FC<PropsWithClassName<Props>> = (props) => {
       href={href}
       locale={locale}
       target={target}
-      className={classNames('!tw-border-none', className)}
+      className={className}
     >
       <Button {...buttonProps} className="tw-w-full tw-h-full" />
     </Link>

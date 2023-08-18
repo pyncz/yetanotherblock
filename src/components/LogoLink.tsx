@@ -11,7 +11,7 @@ export const LogoLink: FC<LogoProps> = (props) => {
     <Link
       href="/"
       className={classNames(
-        '!tw-outline-none !tw-border-none tw-duration-normal tw-opacity-[0.9] hover:tw-opacity-full',
+        '!tw-outline-none tw-duration-normal tw-opacity-[0.9] hover:tw-opacity-full',
         className,
       )}
     >
