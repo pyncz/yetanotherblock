@@ -7,6 +7,7 @@ import type { PropsWithClassName } from '../../models'
 import { Price } from '../Price'
 import { useSongMetadata } from '../../hooks'
 import { ButtonLink } from '../ui'
+import { TokenLink } from './TokenLink'
 
 type TokenCardAppearance = 'full' | 'compact'
 type Props = ReturnType<typeof useTokens>['data'][number] & {
@@ -44,25 +45,27 @@ export const TokenCard: FC<PropsWithClassName<Props>> = (props) => {
         className,
       )}
     >
-      <div
-        className={classNames(
-          'tw-bg-x4 tw-rounded-sm tw-overflow-hidden tw-relative',
-          isCompactView
-            ? 'tw-strict-size-12'
-            : 'tw-w-full tw-aspect-square',
-        )}
-      >
-        {token?.imageSmall
-          ? (
-            <Image
-              fill
-              src={token?.imageSmall}
-              alt={token?.name ?? i18n.t('tokenImage')}
-            />
-            )
-          : null
-        }
-      </div>
+      <TokenLink token={token}>
+        <div
+          className={classNames(
+            'tw-bg-x4 tw-rounded-sm tw-overflow-hidden tw-relative',
+            isCompactView
+              ? 'tw-strict-size-12'
+              : 'tw-w-full tw-aspect-square',
+          )}
+        >
+          {token?.imageSmall
+            ? (
+              <Image
+                fill
+                src={token?.imageSmall}
+                alt={token?.name ?? i18n.t('tokenImage')}
+              />
+              )
+            : null
+          }
+        </div>
+      </TokenLink>
 
       <div
         className={classNames(
@@ -84,7 +87,9 @@ export const TokenCard: FC<PropsWithClassName<Props>> = (props) => {
                 : 'tw-line-clamp-3 tw-mb-1',
             )}
           >
-            {name}
+            <TokenLink token={token}>
+              {name}
+            </TokenLink>
           </div>
 
           <div className="tw-flex tw-flex-wrap tw-text-xs tw-gap-x-2 tw-text-x3">

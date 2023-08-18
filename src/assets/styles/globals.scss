@@ -18,12 +18,6 @@
   small {
     @apply tw-text-sm;
   }
-  a {
-    @apply tw-link;
-    &[role="button"] {
-      border: none !important;
-    }
-  }
   input[type="number"]::-webkit-inner-spin-button {
     appearance: none;
   }
