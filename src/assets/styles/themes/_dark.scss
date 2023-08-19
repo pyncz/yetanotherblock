@@ -53,20 +53,6 @@
   --button-secondary-bg-vivid: var(--bg-x4);
   --button-secondary-color: var(--white);
   --button-secondary-color-vivid: var(--white);
-  // input
-  --input-bg: var(--bg-x1);
-  --input-text: var(--text-x2);
-  --input-border: var(--border-x2);
-  --input-border--hover: var(--border-x1);
-  --input-border--focus: var(--accent-secondary);
-  --input-border--focus-hover: var(--accent-secondary-vivid);
-  --input-placeholder: var(--text-x4);
-  --input-readonly-bg: transparent;
-  --input-readonly-text: var(--text-x3);
-  --input-disabled-bg: var(--bg-x2);
-  --input-disabled-text: var(--text-x3);
-  --input-disabled-border: var(--border-x3);
-  --input-disabled-placeholder: var(--text-x4);
   // radio
   // - container
   --radio-bg: var(--bg-x0);
@@ -79,27 +65,6 @@
   --radio-option-checked-text: var(--text-x1);
   --radio-option-checked-bg: var(--bg-card-active);
   --o-radio-option-checked-bg: 1;
-  // select
-  // - trigger
-  --select-icon: var(--text-x4);
-  // - container
-  --select-arrow: var(--text-x4);
-  --select-arrow--hover: var(--text-x3);
-  --select-content-bg: var(--bg-x3);
-  --select-content-border: var(--border-x2);
-  // - option
-  --select-option-text: var(--text-x3);
-  --select-option-text--hover: var(--text-x2);
-  --select-option-text--highlighted: var(--text-x2);
-  --select-option-disabled-text: var(--text-x4);
-  --select-option-bg: var(--bg-x2);
-  --o-select-option-bg: 0;
-  --select-option-bg--hover: var(--bg-x2);
-  --o-select-option-bg--hover: 1;
-  --select-option-checked-text: var(--text-x1);
-  --select-option-checked-text--hover: var(--text-x1);
-  --select-option-checked-bg: var(--bg-x1);
-  --o-select-option-checked-bg: 1;
 
   --o-ring: 0.4;
 }

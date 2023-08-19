@@ -26,10 +26,10 @@ export const LayoutMain: FC<PropsWithChildren> = ({ children }) => {
         >
           <h1 className="tw-h3 xs:tw-h2 sm:tw-h1 tw-relative tw-row-[2/4] tw-z-1 tw-uppercase tw-max-w-[16rem] tw-my-0 tw-mx-auto tw-space-y-2">
             <span className="tw-text-left tw-block">
-              {i18n.t('hero.0')}
+              {i18n.t('heroFirst')}
             </span>
             <span className="tw-text-right tw-text-x0 tw-text-opacity-0 tw-block tw-bg-[linear-gradient(42deg,_#FFF_0%,_#FFC289_40%,_#FF5B5B_80%,_#674FFF_120%)] tw-bg-clip-text">
-              {i18n.t('hero.1')}
+              {i18n.t('heroSecond')}
             </span>
           </h1>
         </div>

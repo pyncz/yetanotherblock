@@ -27,7 +27,7 @@ export const TokensSection: FC<PropsWithClassName> = ({ className }) => {
       <div
         className={classNames(
           'tw-grid tw-grid-cols-3 tw-gap-3',
-          'child:tw-col-span-3',
+          '[&>*]:tw-col-span-3',
           /* 1st */ 'xs:[&>*:first-child]:tw-row-span-2 xs:[&>*:first-child]:tw-col-span-2 sm:[&>*:first-child]:tw-row-span-1 sm:[&>*:first-child]:tw-col-span-1',
           /* 2nd */ 'xs:[&>*:nth-child(2)]:tw-col-span-1',
           /* 3rd */ 'xs:[&>*:nth-child(3)]:tw-col-span-1',
