@@ -14,7 +14,7 @@ export const TokensSection: FC<PropsWithClassName> = ({ className }) => {
   const { i18n } = useTranslation()
 
   const { data: tokens, fetchNextPage, hasNextPage, isLoading, isFetchingPage } = useTokens({
-    collectionsSetId: env.NEXT_PUBLIC_RESERVOIRE_COLLECTION_SET_ID,
+    collectionsSetId: env.NEXT_PUBLIC_RESERVOIR_COLLECTION_SET_ID,
     limit: DEFAULT_PAGINATION_LIMIT,
     sortBy: 'floorAskPrice',
   })

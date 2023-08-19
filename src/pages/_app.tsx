@@ -27,7 +27,7 @@ const App: AppType = ({ Component, pageProps }: AppPropsWithLayout) => {
               id: 1,
               baseApiUrl: 'https://api.reservoir.tools',
               active: true,
-              apiKey: env.NEXT_PUBLIC_RESERVOIRE_API_KEY,
+              apiKey: env.NEXT_PUBLIC_RESERVOIR_API_KEY,
             }],
           }}
         >

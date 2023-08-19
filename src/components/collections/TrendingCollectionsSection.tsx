@@ -10,7 +10,7 @@ export const TrendingCollectionsSection: FC<PropsWithClassName> = ({ className }
   const { i18n } = useTranslation()
 
   const { data: collections, fetchNextPage, hasNextPage, isFetchingPage, isLoading } = useCollections({
-    collectionsSetId: env.NEXT_PUBLIC_RESERVOIRE_COLLECTION_SET_ID,
+    collectionsSetId: env.NEXT_PUBLIC_RESERVOIR_COLLECTION_SET_ID,
     limit: DEFAULT_PAGINATION_LIMIT,
     sortBy: '30DayVolume',
   })
